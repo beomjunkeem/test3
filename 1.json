@@ -1,0 +1,241 @@
+{
+    "nodes": [
+        {
+            "id": "setup_01",
+            "type": "TradingSetup",
+            "label": "Post-8:30 Liquidity Sweep → Displacement → FVG Return to Down-Close OB",
+            "model_name": "ICT Intraday NY AM Routine",
+            "bias": "Bullish",
+            "source_timestamp": "00:53:36",
+            "speaker_quote": "This down clos[e] candle is a order block… we have displacement… it took liquidity… what makes that order block specifically is it has happened post 8:30.",
+            "status": "UNVERIFIED_LLM",
+            "source_citation": "1"
+        },
+        {
+            "id": "pattern_01",
+            "type": "Pattern",
+            "label": "Fair Value Gap (FVG) / Inefficiency",
+            "source_timestamp": "00:52:21",
+            "speaker_quote": "…took it above this short-term high and traded right inside this … value gap right there.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "pattern_02",
+            "type": "Pattern",
+            "label": "Down-Close Order Block (OB)",
+            "source_timestamp": "00:53:36",
+            "speaker_quote": "…we moved aggressively above the short-term high… we go back down to this down closed candle… that down clos[e] candle is a order block.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "pattern_03",
+            "type": "Pattern",
+            "label": "Displacement",
+            "source_timestamp": "00:53:08",
+            "speaker_quote": "Displacement is where the market runs against a pre-session, pre-day, pre-trend or price swing direction.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "pattern_04",
+            "type": "Pattern",
+            "label": "Volume Imbalance",
+            "source_timestamp": "01:25:28",
+            "speaker_quote": "…you see that little separation—that’s a volume imbalance…",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "pattern_05",
+            "type": "Pattern",
+            "label": "Bullish Breaker",
+            "source_timestamp": "01:24:13",
+            "speaker_quote": "…there that is your bullish breaker… the most sensitivity is going to be seen in that last up close candle.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "liq_01",
+            "type": "Liquidity",
+            "label": "Relative Equal Highs (EQL)",
+            "source_timestamp": "00:49:03",
+            "speaker_quote": "We have relative equal highs right here… very simple, smooth price level.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "liq_02",
+            "type": "Liquidity",
+            "label": "New Week Opening Gap (NWOG) — Draw on Liquidity",
+            "source_timestamp": "00:49:17",
+            "speaker_quote": "…a huge gap—new week opening gap here… that’s a draw on liquidity.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "liq_03",
+            "type": "Liquidity",
+            "label": "Relative Equal Lows (REL) — Liquidity Below",
+            "source_timestamp": "00:52:15",
+            "speaker_quote": "…the market went below these relative equal lows… and then took it above this short-term high…",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "liq_04",
+            "type": "Liquidity",
+            "label": "Buy-Side Liquidity (Buy Stops)",
+            "source_timestamp": "01:54:54",
+            "speaker_quote": "…I’m going to look for buy side liquidity—buy stops…",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "struct_01",
+            "type": "StructureEvent",
+            "label": "Market Structure Shift (MSS)",
+            "source_timestamp": "01:23:04",
+            "speaker_quote": "…how do I know if it’s a breaker or if it’s a shift in market structure…",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "time_01",
+            "type": "TemporalContext",
+            "label": "Post-8:30 NY Window (News-Driven)",
+            "source_timestamp": "00:53:55",
+            "speaker_quote": "…8:30 the algorithm will start spooling for liquidity or inefficiencies…",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "time_02",
+            "type": "TemporalContext",
+            "label": "7:00–7:30 Pre-Market Range",
+            "source_timestamp": "01:52:18",
+            "speaker_quote": "7 o’clock to 7:30—that is your pre-market range…",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "time_03",
+            "type": "TemporalContext",
+            "label": "8:00–8:30 Pre-Market Range",
+            "source_timestamp": "01:52:18",
+            "speaker_quote": "…7:00 to 7:30 or 8:00 to 8:30 or 9 to 9:30… that pre-market range…",
+            "status": "UNVERIFIED_LLM"
+        }
+    ],
+    "edges": [
+        {
+            "id": "edge_01",
+            "label": "PART_OF",
+            "source_node_id": "pattern_01",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_02",
+            "label": "PART_OF",
+            "source_node_id": "pattern_02",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_03",
+            "label": "PART_OF",
+            "source_node_id": "pattern_03",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_04",
+            "label": "PART_OF",
+            "source_node_id": "liq_01",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_05",
+            "label": "PART_OF",
+            "source_node_id": "liq_03",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_06",
+            "label": "PART_OF",
+            "source_node_id": "pattern_04",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_07",
+            "label": "PART_OF",
+            "source_node_id": "pattern_05",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_08",
+            "label": "LEADS_TO",
+            "source_node_id": "liq_03",
+            "target_node_id": "pattern_03"
+        },
+        {
+            "id": "edge_09",
+            "label": "LEADS_TO",
+            "source_node_id": "pattern_03",
+            "target_node_id": "pattern_01"
+        },
+        {
+            "id": "edge_10",
+            "label": "LEADS_TO",
+            "source_node_id": "pattern_01",
+            "target_node_id": "pattern_02"
+        },
+        {
+            "id": "edge_11",
+            "label": "TARGETS",
+            "source_node_id": "setup_01",
+            "target_node_id": "liq_01"
+        },
+        {
+            "id": "edge_12",
+            "label": "TARGETS",
+            "source_node_id": "setup_01",
+            "target_node_id": "liq_02"
+        },
+        {
+            "id": "edge_13",
+            "label": "TARGETS",
+            "source_node_id": "pattern_01",
+            "target_node_id": "liq_01"
+        },
+        {
+            "id": "edge_14",
+            "label": "IN_CONTEXT_OF",
+            "source_node_id": "setup_01",
+            "target_node_id": "time_01"
+        },
+        {
+            "id": "edge_15",
+            "label": "IN_CONTEXT_OF",
+            "source_node_id": "setup_01",
+            "target_node_id": "time_02"
+        },
+        {
+            "id": "edge_16",
+            "label": "IN_CONTEXT_OF",
+            "source_node_id": "pattern_02",
+            "target_node_id": "time_01"
+        },
+        {
+            "id": "edge_17",
+            "label": "IN_CONTEXT_OF",
+            "source_node_id": "pattern_01",
+            "target_node_id": "time_02"
+        },
+        {
+            "id": "edge_18",
+            "label": "PART_OF",
+            "source_node_id": "liq_04",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_19",
+            "label": "IN_CONTEXT_OF",
+            "source_node_id": "setup_01",
+            "target_node_id": "time_03"
+        },
+        {
+            "id": "edge_20",
+            "label": "LEADS_TO",
+            "source_node_id": "liq_01",
+            "target_node_id": "liq_04"
+        }
+    ]
+}

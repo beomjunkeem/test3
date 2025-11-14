@@ -1,0 +1,208 @@
+{
+    "nodes": [
+        {
+            "id": "setup_01",
+            "type": "TradingSetup",
+            "label": "Post-7:00 NY AM Routine — Hunt EQL → Liquidity Engagement → FVG Mapping",
+            "model_name": "ICT Intraday NY AM Routine",
+            "bias": "Bearish",
+            "source_timestamp": "00:49:46",
+            "speaker_quote": "At 7 o'clock in the morning that begins your hunt for relative equal highs or relative equal lows… do not look for your relative equal highs or lows prior to 7 o'clock.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "pattern_01",
+            "type": "Pattern",
+            "label": "Fair Value Gap (FVG) — Down-Close SIBI",
+            "source_timestamp": "01:03:53",
+            "speaker_quote": "A down close fair value gap is… sell-side imbalance, buy-side inefficiency; it offered delivery on the downside and any movement back up into that range is inefficient.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "pattern_02",
+            "type": "Pattern",
+            "label": "Volume Imbalance (Body-to-Body Gap)",
+            "source_timestamp": "01:07:08",
+            "speaker_quote": "The volume imbalance is the separation between one candlestick’s body and the very next subsequent candlestick; if the bodies don’t overlap or at least touch, there’s a volume imbalance.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "pattern_03",
+            "type": "Pattern",
+            "label": "Inversion FVG & Consequent Encroachment (CE) Usage",
+            "source_timestamp": "01:06:31",
+            "speaker_quote": "If it goes above the fair value gap and comes back down, I can use that candle’s wick and halfway point of it—that’s how far I can retrace back into it; it becomes an inversion fair value gap.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "liq_01",
+            "type": "Liquidity",
+            "label": "Relative Equal Highs (EQL) — Post-7:00 Hunt",
+            "source_timestamp": "00:49:53",
+            "speaker_quote": "At 7 o’clock in the morning… begin your hunt for relative equal highs or relative equal lows.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "liq_02",
+            "type": "Liquidity",
+            "label": "Relative Equal Lows (REL) — Post-7:00 Formation",
+            "source_timestamp": "00:55:15",
+            "speaker_quote": "You’re waiting to see relative equal highs and relative equal lows form after post-7 a.m. New York local time.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "liq_03",
+            "type": "Liquidity",
+            "label": "Buy-Side Liquidity (BSL) Taken Above Highs",
+            "source_timestamp": "00:58:54",
+            "speaker_quote": "It took buy-side… after it took that buy-side where did it go directionally? Lower.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "liq_04",
+            "type": "Liquidity",
+            "label": "Draw Beyond REL/EQL Using Outside Structure",
+            "source_timestamp": "01:00:02",
+            "speaker_quote": "If these become relative equal lows and it wants to go below that… how far can it go? Refer over there—outside this parameter you look at structure.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "time_01",
+            "type": "TemporalContext",
+            "label": "Post-7:00 a.m. New York (NY AM Session Start)",
+            "source_timestamp": "00:49:58",
+            "speaker_quote": "7 o’clock in the morning… New York local time—that’s your beginning of the day.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "time_02",
+            "type": "TemporalContext",
+            "label": "15m/5m/1m Intraday Framework (No HTF)",
+            "source_timestamp": "00:13:53",
+            "speaker_quote": "I’m not using anything higher than a 15-minute time frame… for intraday trading you don’t need a daily or hourly chart.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "time_03",
+            "type": "TemporalContext",
+            "label": "9:30 a.m. NY Opening Bell Reference",
+            "source_timestamp": "00:31:34",
+            "speaker_quote": "I won’t be with you after the opening bell at 9:30 eastern time—keep this short study going into the open.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "pattern_04",
+            "type": "Pattern",
+            "label": "Residual/Unfilled Portion of FVG (Precision Re-entry)",
+            "source_timestamp": "01:05:01",
+            "speaker_quote": "Your eye should jump to the little remaining section… I’ve placed limit orders just below it and it runs with no significant drawdown.",
+            "status": "UNVERIFIED_LLM"
+        },
+        {
+            "id": "pattern_05",
+            "type": "Pattern",
+            "label": "Ignore Wicks Inside FVG When VIB Exists",
+            "source_timestamp": "01:09:03",
+            "speaker_quote": "If you have a fair value gap and it has a volume imbalance in it, any wick inside that FVG—completely disregard it.",
+            "status": "UNVERIFIED_LLM"
+        }
+    ],
+    "edges": [
+        {
+            "id": "edge_01",
+            "label": "PART_OF",
+            "source_node_id": "liq_01",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_02",
+            "label": "PART_OF",
+            "source_node_id": "liq_02",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_03",
+            "label": "PART_OF",
+            "source_node_id": "pattern_01",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_04",
+            "label": "PART_OF",
+            "source_node_id": "pattern_02",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_05",
+            "label": "PART_OF",
+            "source_node_id": "pattern_03",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_06",
+            "label": "PART_OF",
+            "source_node_id": "pattern_04",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_07",
+            "label": "PART_OF",
+            "source_node_id": "pattern_05",
+            "target_node_id": "setup_01"
+        },
+        {
+            "id": "edge_08",
+            "label": "LEADS_TO",
+            "source_node_id": "liq_03",
+            "target_node_id": "pattern_01"
+        },
+        {
+            "id": "edge_09",
+            "label": "LEADS_TO",
+            "source_node_id": "liq_01",
+            "target_node_id": "liq_03"
+        },
+        {
+            "id": "edge_10",
+            "label": "LEADS_TO",
+            "source_node_id": "liq_02",
+            "target_node_id": "pattern_01"
+        },
+        {
+            "id": "edge_11",
+            "label": "TARGETS",
+            "source_node_id": "setup_01",
+            "target_node_id": "liq_01"
+        },
+        {
+            "id": "edge_12",
+            "label": "TARGETS",
+            "source_node_id": "setup_01",
+            "target_node_id": "liq_02"
+        },
+        {
+            "id": "edge_13",
+            "label": "TARGETS",
+            "source_node_id": "pattern_01",
+            "target_node_id": "liq_02"
+        },
+        {
+            "id": "edge_14",
+            "label": "IN_CONTEXT_OF",
+            "source_node_id": "setup_01",
+            "target_node_id": "time_01"
+        },
+        {
+            "id": "edge_15",
+            "label": "IN_CONTEXT_OF",
+            "source_node_id": "setup_01",
+            "target_node_id": "time_02"
+        },
+        {
+            "id": "edge_16",
+            "label": "IN_CONTEXT_OF",
+            "source_node_id": "setup_01",
+            "target_node_id": "time_03"
+        }
+    ]
+}
